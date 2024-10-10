@@ -151,5 +151,29 @@ blockquote:nth-child(3) {
   margin: 20px 0 0;
 }
 
+@media (max-width: 768px) {
+  section.testimonial__cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+      'first first'
+      'second fifth'
+      'third fourth';
+  }
+}
+
+@media (max-width: 480px) {
+  section.testimonial__cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+      'first'
+      'second'
+      'third'
+      'fourth'
+      'fifth';
+  }
+}
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
